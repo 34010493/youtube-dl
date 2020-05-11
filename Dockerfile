@@ -5,7 +5,7 @@ RUN apk add --no-cache \
 	tzdata
 
 COPY requirements.txt /usr/src/app/
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r /usr/src/app/requirements.txt
 
 RUN wget -qnd "https://bitbucket.org/shield007/atomicparsley/raw/db624c49ba390a64b4b1ff4ebdfc4967957246ee/downloads/build_linux_x86_64/AtomicParsley" && \
     install -m 755 -t /usr/local/bin ./AtomicParsley && \
