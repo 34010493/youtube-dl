@@ -12,8 +12,8 @@ RUN wget -qnd "https://bitbucket.org/shield007/atomicparsley/raw/db624c49ba390a6
     rm ./AtomicParsley
 
 # Add files
-ADD run.sh /run.sh
-ADD entrypoint.sh /entrypoint.sh
+COPY run.sh /run.sh
+COPY entrypoint_alpine.sh /entrypoint.sh
  
 RUN chmod +x /run.sh /entrypoint.sh
 
